@@ -164,7 +164,7 @@ This provides important data related to PPARg LBD folding landscape → intermed
 
 ---
 
-# ❤️ Final Notes
+# Final Notes
 
 This repository contains a complete and reproducible workflow for **SMOG2-based REMD simulations** in **GROMACS**, including preparation, execution, demultiplexing, Q-analysis, and WHAM free-energy reconstruction.
 
