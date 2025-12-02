@@ -1,0 +1,26 @@
+              :-) GROMACS - gmx editconf, 2023.5-plumed_2.9.2 (-:
+
+Executable:   /home/karadim/gromacs-2023.5-plumed-mpi/bin/gmx_mpi
+Data prefix:  /home/karadim/gromacs-2023.5-plumed-mpi
+Working dir:  /panfs/accrepfs.vampire/data/kojetin_lab/Mithun/SMOG_Sims/SMOG_preanalysis/6ONI/AA/Test
+Command line:
+  gmx_mpi editconf -f ../6ONI-AA.gro -c -d 10 -bt cubic -o 6ONI-AA-box.gro
+
+
+GROMACS reminds you: "The Wheels On the Bus Go Round and Round" (J. Richman)
+
+Note that major changes are planned in future for editconf, to improve usability and utility.
+Read 2178 atoms
+Volume: 404.459 nm^3, corresponds to roughly 182000 electrons
+No velocities found
+    system size :  4.622  6.350  5.315 (nm)
+    diameter    :  6.448               (nm)
+    center      :  2.378 18.337  1.352 (nm)
+    box vectors :  6.622  8.350  7.314 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  : 404.46               (nm^3)
+    shift       : 10.846 -5.113 11.872 (nm)
+new center      : 13.224 13.224 13.224 (nm)
+new box vectors : 26.448 26.448 26.448 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  :18499.44               (nm^3)

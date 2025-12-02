@@ -1,0 +1,51 @@
+              :-) GROMACS - gmx editconf, 2023.5-plumed_2.9.2 (-:
+
+Executable:   /home/karadim/gromacs-2023.5-plumed-mpi/bin/gmx_mpi
+Data prefix:  /home/karadim/gromacs-2023.5-plumed-mpi
+Working dir:  /panfs/accrepfs.vampire/data/kojetin_lab/Mithun/SMOG_Sims/SMOG_Replica_Exchange/3PRG
+Command line:
+  gmx_mpi editconf -f 6ONI-AA.gro -c -d 10 -bt cubic -o 6ONI-AA-box.gro
+
+
+-------------------------------------------------------
+Program:     gmx editconf, version 2023.5-plumed_2.9.2
+Source file: src/gromacs/commandline/cmdlineparser.cpp (line 271)
+Function:    void gmx::CommandLineParser::parse(int*, char**)
+
+Error in user input:
+Invalid command-line options
+  In command-line option -f
+    File '6ONI-AA.gro' does not exist or is not accessible.
+    The file could not be opened.
+      Reason: No such file or directory
+      (call to fopen() returned error code 2)
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------
+              :-) GROMACS - gmx editconf, 2023.5-plumed_2.9.2 (-:
+
+Executable:   /home/karadim/gromacs-2023.5-plumed-mpi/bin/gmx_mpi
+Data prefix:  /home/karadim/gromacs-2023.5-plumed-mpi
+Working dir:  /panfs/accrepfs.vampire/data/kojetin_lab/Mithun/SMOG_Sims/SMOG_Replica_Exchange/3PRG
+Command line:
+  gmx_mpi editconf -f 3PRG-AA.gro -c -d 10 -bt cubic -o 3PRG-AA-box.gro
+
+
+GROMACS reminds you: "I don't know how many of you have ever met Dijkstra, but you probably know that arrogance in computer science is measured in nano-Dijkstras." (Alan Kay)
+
+Note that major changes are planned in future for editconf, to improve usability and utility.
+Read 2178 atoms
+Volume: 384.847 nm^3, corresponds to roughly 173100 electrons
+No velocities found
+    system size :  4.548  6.304  5.077 (nm)
+    diameter    :  6.831               (nm)
+    center      :  2.316 18.309  1.398 (nm)
+    box vectors :  6.549  8.304  7.077 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  : 384.85               (nm^3)
+    shift       : 11.099 -4.893 12.017 (nm)
+new center      : 13.416 13.416 13.416 (nm)
+new box vectors : 26.831 26.831 26.831 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  :19315.92               (nm^3)
