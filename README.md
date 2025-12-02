@@ -2,7 +2,7 @@
 
 Structure-based (Gō-like) models provide a simplified yet powerful framework for studying biomolecular folding and conformational dynamics. Instead of assigning interactions strictly from chemical composition, these models stabilize a known experimental structure by defining native contacts as energetic minima, consistent with the principle of minimal frustration. This strategy enables efficient and interpretable simulations of protein folding, ligand binding, and large-scale rearrangements in proteins.
 
-The **SMOG2** software package was deployed in MD engine **GROMACS** in this corrent workflow
+The **SMOG2** software package was deployed in MD engine **GROMACS** in this current workflow
 
 📖 **Comprehensive reference** → https://pmc.ncbi.nlm.nih.gov/articles/PMC8740843/
 
