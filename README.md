@@ -145,7 +145,7 @@ md.log
 
 ---
 
-# 🎨 Free-Energy Landscape (Enhanced ASCII Figure)
+# 🎨 Free-Energy Landscape 
 
 ```
                 PROTEIN FOLDING ROLLERCOASTER
