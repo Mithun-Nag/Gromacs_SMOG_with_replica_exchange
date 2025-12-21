@@ -24,35 +24,34 @@ and is trimmed to begin at **residue 235 (Glu)**, the crystallographically resol
 
 Gromacs_SMOG_with_replica_exchange/
 │
-├── 3PRG/ # SMOG REMD simulation directories (system/temperature level)
+├── 3PRG/                          # SMOG REMD simulation directories (system/temperature level)
 ├── 6ONI/
 ├── 6ONJ/
 │
-├── MDP/ # GROMACS parameter files
-│ └── example.mdp
+├── MDP/                           # GROMACS parameter files
+│   └── example.mdp
 │
-├── Preparation_and_Run_Scripts/ # SMOG preparation, topology/tpr generation, SLURM run scripts
-│ └── 1_SMOG_Simulation_Prep.ipynb
+├── Preparation_and_Run_Scripts/   # SMOG preparation, topology/tpr generation, SLURM run scripts
+│   └── 1_SMOG_Simulation_Prep.ipynb
 │
-├── Analysis_Scripts/ # Analysis workflow (run sequentially after simulations)
-│ │
-│ ├── Preanalysis_and_exploratory_data_analysis/
-│ │ ├── SMOG_Replica_3PRG.ipynb
-│ │ ├── SMOG_Replica_6ONJ.ipynb
-│ │ └── SMOG_Replica_6ONI.ipynb
-│ │
-│ ├── 1_Combined_Analysis_SMOG.ipynb # Demultiplexing, temperature mapping, data collation
-│ ├── 2_RMSD_Rg_calculation.ipynb # RMSD and radius of gyration calculations
-│ ├── 3_PCA_Analysis_plots.ipynb # PCA construction and visualization
-│ └── README.md # Detailed analysis documentation 
+├── Analysis_Scripts/              # Analysis workflow (run sequentially after simulations)
+│   │
+│   ├── Preanalysis_and_exploratory_data_analysis/
+│   │   ├── SMOG_Replica_3PRG.ipynb
+│   │   ├── SMOG_Replica_6ONJ.ipynb
+│   │   └── SMOG_Replica_6ONI.ipynb
+│   │
+│   ├── 1_Combined_Analysis_SMOG.ipynb     # Demultiplexing, temperature mapping, data collation
+│   ├── 2_RMSD_Rg_calculation.ipynb        # RMSD and radius of gyration calculations
+│   ├── 3_PCA_Analysis_plots.ipynb         # PCA construction and visualization
+│   └── README.md                          # Detailed analysis documentation
 │
-├── Advanced_Analysis/ # Lightweight analysis outputs (PCA, RMSD, Rg; no raw trajectories)
-|
+├── Advanced_Analysis/             # Lightweight analysis outputs (PCA, RMSD, Rg; no raw trajectories)
 │
-├── contacts-python/ # Native-contact & Q-computation utilities
+├── contacts-python/               # Native-contact & Q-computation utilities
 │
-└── WHAM/ # Free-energy reconstruction outputs
-```
+└── WHAM/                          # Free-energy reconstruction outputs
+
 
 ---
 
