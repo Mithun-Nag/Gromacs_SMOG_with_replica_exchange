@@ -1,0 +1,132 @@
+              :-) GROMACS - gmx editconf, 2023.5-plumed_2.9.2 (-:
+
+Executable:   /home/karadim/gromacs-2023.5-plumed-mpi/bin/gmx_mpi
+Data prefix:  /home/karadim/gromacs-2023.5-plumed-mpi
+Working dir:  /panfs/accrepfs.vampire/data/kojetin_lab/Mithun/SMOG_Sims/SMOG_Replica_Publish/6ONJ
+Command line:
+  gmx_mpi editconf -f ../6ONJ-AA.gro -c -d 10 -bt cubic -o 3PRG-AA-box.gro
+
+
+-------------------------------------------------------
+Program:     gmx editconf, version 2023.5-plumed_2.9.2
+Source file: src/gromacs/commandline/cmdlineparser.cpp (line 271)
+Function:    void gmx::CommandLineParser::parse(int*, char**)
+
+Error in user input:
+Invalid command-line options
+  In command-line option -f
+    File '../6ONJ-AA.gro' does not exist or is not accessible.
+    The file could not be opened.
+      Reason: No such file or directory
+      (call to fopen() returned error code 2)
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------
+              :-) GROMACS - gmx editconf, 2023.5-plumed_2.9.2 (-:
+
+Executable:   /home/karadim/gromacs-2023.5-plumed-mpi/bin/gmx_mpi
+Data prefix:  /home/karadim/gromacs-2023.5-plumed-mpi
+Working dir:  /panfs/accrepfs.vampire/data/kojetin_lab/Mithun/SMOG_Sims/SMOG_Replica_Publish/6ONJ
+Command line:
+  gmx_mpi editconf -f ../6ONJ-AA.gro -c -d 10 -bt cubic -o 6ONJ-AA-box.gro
+
+
+-------------------------------------------------------
+Program:     gmx editconf, version 2023.5-plumed_2.9.2
+Source file: src/gromacs/commandline/cmdlineparser.cpp (line 271)
+Function:    void gmx::CommandLineParser::parse(int*, char**)
+
+Error in user input:
+Invalid command-line options
+  In command-line option -f
+    File '../6ONJ-AA.gro' does not exist or is not accessible.
+    The file could not be opened.
+      Reason: No such file or directory
+      (call to fopen() returned error code 2)
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------
+              :-) GROMACS - gmx editconf, 2023.5-plumed_2.9.2 (-:
+
+Executable:   /home/karadim/gromacs-2023.5-plumed-mpi/bin/gmx_mpi
+Data prefix:  /home/karadim/gromacs-2023.5-plumed-mpi
+Working dir:  /panfs/accrepfs.vampire/data/kojetin_lab/Mithun/SMOG_Sims/SMOG_Replica_Publish/6ONJ
+Command line:
+  gmx_mpi editconf -f 6ONJ-AA.gro -c -d 10 -bt cubic -o 6ONJ-AA-box.gro
+
+
+GROMACS reminds you: "The scientist is not the person who always gives the right answers, he is the one who asks the right questions." (Claude Levi-Strauss)
+
+Note that major changes are planned in future for editconf, to improve usability and utility.
+Read 2178 atoms
+Volume: 353.508 nm^3, corresponds to roughly 159000 electrons
+No velocities found
+    system size :  4.563  6.179  4.585 (nm)
+    diameter    :  6.593               (nm)
+    center      :  2.280 18.259  1.385 (nm)
+    box vectors :  6.563  8.179  6.586 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  : 353.51               (nm^3)
+    shift       : 11.016 -4.962 11.911 (nm)
+new center      : 13.296 13.296 13.296 (nm)
+new box vectors : 26.593 26.593 26.593 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  :18805.39               (nm^3)
+              :-) GROMACS - gmx editconf, 2023.5-plumed_2.9.2 (-:
+
+Executable:   /home/karadim/gromacs-2023.5-plumed-mpi/bin/gmx_mpi
+Data prefix:  /home/karadim/gromacs-2023.5-plumed-mpi
+Working dir:  /panfs/accrepfs.vampire/data/kojetin_lab/Mithun/SMOG_Sims/SMOG_Replica_Publish/6ONJ
+Command line:
+  gmx_mpi editconf -f 6ONJ-AA.gro -c -d 10 -bt cubic -o 6ONJ-AA-box.gro
+
+
+Back Off! I just backed up 6ONJ-AA-box.gro to ./#6ONJ-AA-box.gro.1#
+
+GROMACS reminds you: "If 10 years from now, when you are doing something quick and dirty, you suddenly visualize that I am looking over your shoulders and say to yourself: 'Dijkstra would not have liked this', well that would be enough immortality for me." (Edsger Dijkstra)
+
+Note that major changes are planned in future for editconf, to improve usability and utility.
+Read 2178 atoms
+Volume: 353.508 nm^3, corresponds to roughly 159000 electrons
+No velocities found
+    system size :  4.563  6.179  4.585 (nm)
+    diameter    :  6.593               (nm)
+    center      :  2.280 18.259  1.385 (nm)
+    box vectors :  6.563  8.179  6.586 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  : 353.51               (nm^3)
+    shift       : 11.016 -4.962 11.911 (nm)
+new center      : 13.296 13.296 13.296 (nm)
+new box vectors : 26.593 26.593 26.593 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  :18805.39               (nm^3)
+              :-) GROMACS - gmx editconf, 2023.5-plumed_2.9.2 (-:
+
+Executable:   /home/karadim/gromacs-2023.5-plumed-mpi/bin/gmx_mpi
+Data prefix:  /home/karadim/gromacs-2023.5-plumed-mpi
+Working dir:  /panfs/accrepfs.vampire/data/kojetin_lab/Mithun/SMOG_Sims/SMOG_Replica_Publish/6ONJ
+Command line:
+  gmx_mpi editconf -f 6ONJ-AA.gro -c -d 10 -bt cubic -o 6ONJ-AA-box.gro
+
+
+Back Off! I just backed up 6ONJ-AA-box.gro to ./#6ONJ-AA-box.gro.1#
+
+GROMACS reminds you: "Once Again Let Me Do This" (Urban Dance Squad)
+
+Note that major changes are planned in future for editconf, to improve usability and utility.
+Read 2178 atoms
+Volume: 353.508 nm^3, corresponds to roughly 159000 electrons
+No velocities found
+    system size :  4.563  6.179  4.585 (nm)
+    diameter    :  6.593               (nm)
+    center      :  2.280 18.259  1.385 (nm)
+    box vectors :  6.563  8.179  6.586 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  : 353.51               (nm^3)
+    shift       : 11.016 -4.962 11.911 (nm)
+new center      : 13.296 13.296 13.296 (nm)
+new box vectors : 26.593 26.593 26.593 (nm)
+new box angles  :  90.00  90.00  90.00 (degrees)
+new box volume  :18805.39               (nm^3)

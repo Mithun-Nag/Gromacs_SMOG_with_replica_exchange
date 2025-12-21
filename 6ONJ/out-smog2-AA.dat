@@ -1,0 +1,179 @@
+/bin/bash: create_passwd: line 1: syntax error: unexpected end of file
+/bin/bash: error importing function definition for `create_passwd'
+/bin/bash: find_port: line 1: syntax error: unexpected end of file
+/bin/bash: error importing function definition for `find_port'
+/bin/bash: ml: line 1: syntax error: unexpected end of file
+/bin/bash: error importing function definition for `ml'
+/bin/bash: module: line 1: syntax error: unexpected end of file
+/bin/bash: error importing function definition for `module'
+/bin/bash: port_used: line 1: syntax error: unexpected end of file
+/bin/bash: error importing function definition for `port_used'
+/bin/bash: random_number: line 1: syntax error: unexpected end of file
+/bin/bash: error importing function definition for `random_number'
+/bin/bash: setup_accre_software_stack: line 1: syntax error: unexpected end of file
+/bin/bash: error importing function definition for `setup_accre_software_stack'
+/bin/bash: source_helpers: line 1: syntax error: unexpected end of file
+/bin/bash: error importing function definition for `source_helpers'
+/bin/bash: wait_until_port_used: line 1: syntax error: unexpected end of file
+/bin/bash: error importing function definition for `wait_until_port_used'
+/bin/bash: which: line 1: syntax error: unexpected end of file
+/bin/bash: error importing function definition for `which'
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "en_US.UTF-8"
+    are supported and installed on your system.
+perl: warning: Falling back to the standard locale ("C").
+*******************************************************************************************
+
+******* ******* ******* ******* ******* SMOG v2.4.5 ******* ******* ******* ******* *******
+                                             
+               Thank you for using the Structure-based Model (SMOG) software
+                                             
+     This package is the product of contributions from a number of people, including:
+            Jeffrey Noel, Mariana Levi, Antonio Oliveira, Vinícius Contessoto,
+          Esteban Dodero-Rojas, Mohit Raghunathan, Joyce Yang, Prasad Bandarkar,
+                  Udayan Mohanty, Ailun Wang, Heiko Lammert, Ryan Hayes,
+                               Jose Onuchic & Paul Whitford
+                                             
+            Copyright (c) 2015,2016,2018,2021,2022 The SMOG development team at
+                       The Center for Theoretical Biological Physics
+                        Rice University and Northeastern University
+                                             
+         SMOG v2.4.5, Shadow and OpenSMOG are available at http://smog-server.org
+                                             
+        You can direct questions to info@smog-server.org, or the smog-users forum,
+        which can be found at https://mailman.rice.edu/mailman/listinfo/smog-users
+*******************************************************************************************
+
+SMOG 2 called with the command:
+smog2 -i /work/6ONJ-adjusted.pdb -dname 6ONJ-AA -AA 
+
+-AA given. Will use the default All-Atom SMOG model provided with the distribution.
+Will try to use templates found in 
+/opt/smog2/SBM_AA
+
+
+*****************************************************
+******* ALL-ATOM SMOG MODEL WILL BE GENERATED *******
+*****************************************************
+Parsing templates files...
+Found .b file /opt/smog2/SBM_AA/AA-whitford09.b
+Found .bif file /opt/smog2/SBM_AA/AA-whitford09.bif
+Found .nb file /opt/smog2/SBM_AA/AA-whitford09.nb
+Found .sif file /opt/smog2/SBM_AA/AA-whitford09.sif
+Validating XML format of /opt/smog2/SBM_AA/AA-whitford09.bif
+Validating XML format of /opt/smog2/SBM_AA/AA-whitford09.sif
+Validating XML format of /opt/smog2/SBM_AA/AA-whitford09.b
+Validating XML format of /opt/smog2/SBM_AA/AA-whitford09.nb
+
+NOTE 1: Contact pairs that use function contact_1 will also be added to the exclusions list.
+
+
+Done parsing templates.
+
+Checking template definitions for consistency.
+
+Pre-processing templates
+
+Reading /work/6ONJ-adjusted.pdb
+
+6ONJ-AA.gro written
+Checking PDB formatting
+Done checking PDB formatting
+
+Organizing PDB data
+Building covalent geometry for chain 1
+Attempting to connect all atoms in chain 1 to the first atom...
+	All 2178 atoms connected via covalent bonds 
+Generating bonds for chain 1.
+Generating bond angles for chain 1.
+Generating dihedral angles for chain 1.
+Generating improper angles for chain 1.
+Done generating bonded geometry of chain 1.
+
+Done building covalent geometry of all chains.
+
+Counting dihedrals
+Setting energetic ratios
+Processing atoms
+Charge of chain 1: 0
+
+Total charge of system:    0.000
+
+Checking and saving bonds
+Setting intra-residue bonds distances
+Setting inter-residue bonds for:
+	chain 1...
+Checking and saving angles
+Working on:
+	chain 1...
+Checking and saving dihedrals
+Working on:
+	chain 1...
+Starting contact calculations ...
+  Calling /opt/smog2/src/tools/SCM.jar 
+	
+	Shadow Contact Map Java Application (SCM)
+	More information at: http://smog-server.org/Shadow.html and the SMOG2 manual
+	Version 1.33
+	Using residue definitions from supplied .bif.
+	Reading grofile: 6ONJ-AA4SCM.gro.
+	Reading chains from 6ONJ-AA.ndx.
+	Found 1 chains.
+	Calculating contacts.
+		10% done and 47 contacts.
+		20% done and 217 contacts.
+		30% done and 390 contacts.
+		40% done and 736 contacts.
+		50% done and 1367 contacts.
+		60% done and 1831 contacts.
+		70% done and 2317 contacts.
+		80% done and 2532 contacts.
+		90% done and 2735 contacts.
+	Printing contacts to file: 6ONJ-AA.contacts.
+	******* Parameters used for determination of contacts *********
+	Using type: Shadow
+	Atom shadowing size: 1.0 angstrom
+	Shadowing size of bonded atom: 0.5 angstrom
+	Cutoff radius: 6.0 angstrom
+	Minimum sequence distance between protein contacts: |i-j|>3
+	***************************************************************
+	Finished with contacts. 
+
+If normalization is used, the total number of atoms included in normalization
+will be 2178, while 2178 atoms are in the system.
+Completing final details...
+
+Your Structure-based Model is ready!
+
+Files generated: 
+	6ONJ-AA.top
+	6ONJ-AA.gro
+	6ONJ-AA.ndx
+	6ONJ-AA.contacts
+
+########################################################################################
+
+              We kindly ask that you cite the appropriate primary references
+             when using SMOG models. See http://www.smog-server.org/refs.html
+
+--Software-- 
+Noel JK, Levi M, Raghunathan M, Lammert H, Hayes R, Onuchic JN, and Whitford PC. (2016)
+SMOG V2, A Versatile Software Package for Generating Structure-Based Models.
+PLoS Comput Biol 12(3): e1004794. doi:10.1371/journal.pcbi.1004794
+
+
+--All-Atom Model-- 
+Whitford PC, et al. (2009) Proteins: Structure, Function, Bioinformatics, 75, 430-441. 
+
+--Contact Potentials--
+Shadow Algorithm: Noel JK, Whitford PC, Onuchic, JN (2012) J Phys Chem, 116, 8692-8702.
+
+########################################################################################
+
+
+
+THERE WAS 1 NOTE. Even if you know what you are doing, it is always worth checking any notes.
+

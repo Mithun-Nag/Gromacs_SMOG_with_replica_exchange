@@ -23,7 +23,7 @@ Will use an exact-matching map file
 
 NOTE 1: In mapping file, only astrisks found in atom names.  Since it is possible to use the ' or * convention, smog_adjustPDB will also interpret every ' in the PDB as a *.  Use "-noautorename" to disable this behavior.
 
-Renamed residues/atoms in chain index 1: TYR-477->TYRT-271 
+Renamed residues/atoms in chain index 1: TYR-271->TYRT-271 
 
 
 THERE WAS 1 NOTE. Even if you know what you are doing, it is always worth checking any notes.

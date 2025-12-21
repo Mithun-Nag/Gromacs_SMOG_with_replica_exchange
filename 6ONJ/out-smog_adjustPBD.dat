@@ -1,0 +1,33 @@
+****************************************************************************************
+                                            
+                                     smog_adjustPDB
+                                            
+    smog_adjustPDB is part of the SMOG 2 distribution, available at smog-server.org
+                                            
+   This tool will renumber the atoms in each chain, and modify the names of terminal
+       residues, so that they are compatible with the definitions used by SMOG 2
+                                            
+                       See the SMOG manual for usage guidelines.
+                                            
+           For questions regarding this script, contact info@smog-server.org
+****************************************************************************************
+
+Will reformat the PDB file: /work/6ONJ-clean.pdb
+
+Will use the default map file for list of residue names.
+New file will be written: /work/6ONJ-adjusted.pdb
+
+Mapping file "/opt/smog2/share/mapfiles/sbmMapExact" will be read.
+
+Will use an exact-matching map file
+
+NOTE 1: In mapping file, only astrisks found in atom names.  Since it is possible to use the ' or * convention, smog_adjustPDB will also interpret every ' in the PDB as a *.  Use "-noautorename" to disable this behavior.
+
+Renamed residues/atoms in chain index 1: TYR-271->TYRT-271 
+
+
+THERE WAS 1 NOTE. Even if you know what you are doing, it is always worth checking any notes.
+
+
+	Adjustment of PDB is complete.
+
