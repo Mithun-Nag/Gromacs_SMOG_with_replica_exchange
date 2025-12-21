@@ -21,7 +21,7 @@ All protein models were generated using **SWISS-MODEL**, with custom templates b
 and is trimmed to begin at **residue 235 (Glu)**, the crystallographically resolved start of the LBD.
 
 ---
-'''
+```
 Gromacs_SMOG_with_replica_exchange/
 │
 ├── 3PRG/                          # SMOG REMD simulation directories (system/temperature level)
@@ -51,7 +51,7 @@ Gromacs_SMOG_with_replica_exchange/
 ├── contacts-python/               # Native-contact & Q-computation utilities
 │
 └── WHAM/                          # Free-energy reconstruction outputs
-'''
+```
 ---
 
 # 🚀 Workflow Overview
