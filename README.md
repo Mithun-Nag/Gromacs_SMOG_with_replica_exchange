@@ -96,7 +96,7 @@ It performs the following:
 - Configures GROMACS **multidir REMD**
 - Submits simulations via a **SLURM job script**
 - Writes **all trajectories and outputs directly into the corresponding system/temperature directories**
-
+```
          INPUT PDBs
     ┌───────────────────┐
     │   3PRG / 6ONJ /   │
@@ -126,7 +126,7 @@ It performs the following:
     │ OUTPUTS WRITTEN TO│
     │ system/temp dirs │
     └───────────────────┘
-
+```
 
 ---
 
