@@ -1,8 +1,8 @@
-# 🌟 Structure-Based Modeling with SMOG2
+# 🌟 SMOG2 Simulations of PPARg LBD
 
-Structure-based (Gō-like) models provide a simplified yet powerful framework for studying biomolecular folding and conformational dynamics. Instead of assigning interactions strictly from chemical composition, these models stabilize a known experimental structure by defining native contacts as energetic minima, consistent with the principle of minimal frustration. This strategy enables efficient and interpretable simulations of protein folding, ligand binding, and large-scale rearrangements in ribonucleoprotein complexes.
+Structure-based (Gō-like) models provide a simplified yet powerful framework for studying biomolecular folding and conformational dynamics. Instead of assigning interactions strictly from chemical composition, these models stabilize a known experimental structure by defining native contacts as energetic minima, consistent with the principle of minimal frustration. This strategy enables efficient and interpretable simulations of protein folding, ligand binding, and large-scale rearrangements in proteins.
 
-The **SMOG2** software package was developed to provide a unified, customizable, and reproducible environment for building such models. Its XML-based template architecture allows researchers to construct coarse-grained, multi-basin, all-atom, or hybrid structure-based force fields deployable in modern MD engines such as **GROMACS**, **NAMD**, **LAMMPS**, and **OpenMM**. Recent extensions such as **OpenSMOG** allow even more flexible potential definitions and large-scale applications.
+The **SMOG2** software package was deployed in MD engine **GROMACS** in this current workflow
 
 📖 **Comprehensive reference** → https://pmc.ncbi.nlm.nih.gov/articles/PMC8740843/
 
@@ -145,7 +145,7 @@ md.log
 
 ---
 
-# 🎨 Free-Energy Landscape (Enhanced ASCII Figure)
+# 🎨 Free-Energy Landscape 
 
 ```
                 PROTEIN FOLDING ROLLERCOASTER
@@ -164,7 +164,7 @@ This provides important data related to PPARg LBD folding landscape → intermed
 
 ---
 
-# ❤️ Final Notes
+# Final Notes
 
 This repository contains a complete and reproducible workflow for **SMOG2-based REMD simulations** in **GROMACS**, including preparation, execution, demultiplexing, Q-analysis, and WHAM free-energy reconstruction.
 
