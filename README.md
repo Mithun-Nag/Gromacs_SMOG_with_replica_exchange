@@ -22,29 +22,36 @@ and is trimmed to begin at **residue 235 (Glu)**, the crystallographically resol
 
 ---
 
-# 📁 Directory Structure
-
-```
 Gromacs_SMOG_with_replica_exchange/
 │
-├── 3PRG/                      # SMOG REMD simulation directories where all output files will be written to also add your PDB files here 
+├── 3PRG/ # SMOG REMD simulation directories (system/temperature level)
 ├── 6ONI/
 ├── 6ONJ/
 │
-├── MDP/ 
-│   └── example.mdp                     
+├── MDP/ # GROMACS parameter files
+│ └── example.mdp
 │
-├── Preparation_and_Run_Scripts/    # SMOG prep, tpr generation, slurm scripts
-│   └── 1_SMOG_Simualtion_Prep_&_Run.ipynb
+├── Preparation_and_Run_Scripts/ # SMOG preparation, topology/tpr generation, SLURM run scripts
+│ └── 1_SMOG_Simulation_Prep.ipynb
 │
-├── Analysis_Scripts/          # WHAM + Q-analysis notebooks & scripts
-│   ├── SMOG_Replica_3PRG.ipynb
-│   ├── SMOG_Replica_6ONJ.ipynb  
-│   └── SMOG_Replica_6ONI.ipynb
+├── Analysis_Scripts/ # Analysis workflow (run sequentially after simulations)
+│ │
+│ ├── Preanalysis_and_exploratory_data_analysis/
+│ │ ├── SMOG_Replica_3PRG.ipynb
+│ │ ├── SMOG_Replica_6ONJ.ipynb
+│ │ └── SMOG_Replica_6ONI.ipynb
+│ │
+│ ├── 1_Combined_Analysis_SMOG.ipynb # Demultiplexing, temperature mapping, data collation
+│ ├── 2_RMSD_Rg_calculation.ipynb # RMSD and radius of gyration calculations
+│ ├── 3_PCA_Analysis_plots.ipynb # PCA construction and visualization
+│ └── README.md # Detailed analysis documentation 
+│
+├── Advanced_Analysis/ # Lightweight analysis outputs (PCA, RMSD, Rg; no raw trajectories)
 |
-├── contacts-python/           # Native-contact & Q-computation utilities
 │
-└── WHAM/                      # Free-energy reconstruction outputs
+├── contacts-python/ # Native-contact & Q-computation utilities
+│
+└── WHAM/ # Free-energy reconstruction outputs
 ```
 
 ---
@@ -52,7 +59,7 @@ Gromacs_SMOG_with_replica_exchange/
 # 🚀 Workflow Overview
 
 ## **1️⃣ Preparation & Model Generation**
-Begin by opening **Preparation_and_Run_Scripts/** and running the Jupyter notebook.  
+Begin by opening **Preparation_and_Run_Scripts/** and running the Jupyter notebook - 1_SMOG_Simulation_Prep.ipynb.  
 ACCRE cannot use Docker directly, so the SMOG2 Docker image is converted to Apptainer:
 
 ```bash
@@ -63,13 +70,7 @@ This `.sif` file contains the full SMOG2 + OpenSMOG environment.
 
 🔗 Docker source: https://hub.docker.com/r/smogserver/smog2
 
-Inside the notebook:
 
-- SMOG-based models are generated  
-- native-contact maps are built  
-- all replica `.tpr` files are created  
-- a temperature ladder (100–118 K) is selected based on preliminary exploration  
-- a multidir REMD run is prepared  
 
 ⚠️ **Important:**  
 This part must be adapted to *your* HPC:  
@@ -81,93 +82,75 @@ The GROMACS run writes large files to each replica directory. To conserve space 
 - `ener.edr`  
 - `traj_comp.xtc`
 
-Everything required to reproduce the analysis remains.
+### What this notebook does
 
----
+This notebook is responsible **only for setup and execution**, not analysis and the analysis scripts are included in Analysis_Scripts folder, please
+refer to the README in the folder for more details.
 
-## **2️⃣ Analysis: Q-Computation, Temperature Mapping, and WHAM**
+It performs the following:
 
-Open **Analysis_Scripts/** and run the three Jupyter notebooks in order:
+- Uses **input PDB files placed inside the system folders**: `3PRG/`, `6ONJ/`, `6ONI/`
+- Generates SMOG-based models for each system
+- Builds native-contact maps
+- Creates all replica **`.tpr`** files
+- Defines the **temperature ladder (100–118 K)** as specified in the notebook
+- Automatically creates **per-temperature subdirectories** inside each system folder
+- Configures GROMACS **multidir REMD**
+- Submits simulations via a **SLURM job script**
+- Writes **all trajectories and outputs directly into the corresponding system/temperature directories**
 
-1. **SMOG_Replica_3PRG.ipynb**  
-2. **SMOG_Replica_6ONJ.ipynb**  
-3. **SMOG_Replica_6ONI.ipynb**
+         INPUT PDBs
+    ┌───────────────────┐
+    │   3PRG / 6ONJ /   │
+    │        6ONI       │
+    └─────────┬─────────┘
+              │
+              ▼
+    ┌───────────────────┐
+    │   SMOG2 MODELING  │
+    │  + CONTACT MAPS  │
+    └─────────┬─────────┘
+              │
+              ▼
+    ┌───────────────────┐
+    │  REPLICA SETUP    │
+    │  (TPRs, TEMPS)   │
+    └─────────┬─────────┘
+              │
+              ▼
+    ┌───────────────────┐
+    │  SLURM SUBMISSION │
+    │  MULTIDIR REMD   │
+    └─────────┬─────────┘
+              │
+              ▼
+    ┌───────────────────┐
+    │ OUTPUTS WRITTEN TO│
+    │ system/temp dirs │
+    └───────────────────┘
 
-These notebooks implement:
-
-### 🔄 **Demultiplexing (DEMUX)**  
-To reconstruct continuous temperature trajectories from REMD, the demux tool is used:
-
-🔗 Demux script: https://github.com/srnas/demux/tree/master  
-
-This produces:
-
-- `*_trajout.xtc`  
-- `replica_index.xvg`  
-- `replica_temp.xvg`  
-
-These were later removed to save space.
-
-### 📊 **Q-Analysis (Native Contacts)**  
-Workflow adapted from:  
-🔗 https://github.com/smog-server/SMOG2_tutorial  
-
-Each notebook:
-
-- computes native-contact Q for every frame  
-- constructs probability distributions \(P(Q)\)  
-- prepares WHAM inputs  
-
-### 🧮 **WHAM Free-Energy Reconstruction**  
-The WHAM folder contains outputs derived from:
-
-\[
-F(Q) = -kT \ln P(Q)
-\]
-
-Notebooks reconstruct folded → intermediate → unfolded basins across temperatures.
-
-### 🧹 Additional Deleted Files  
-Removed after analysis:
-
-```
-energy.dat
-e-Q.dat
-potential.xvg
-timestep-*.dat
-replica_index.xvg
-replica_temp.xvg
-*__trajout.xtc
-traj_comp.xtc
-ener.edr
-md.log
-```
-
----
-
-# 🎨 Free-Energy Landscape 
-
-```
-                PROTEIN FOLDING ROLLERCOASTER
-        ==================================================
-              Unfolded           Intermediate         Folded
-                State               State             State
-                 ____                 /\                *
-     Q≈0        /    \               /  \             (Native)
-   Energy -->  /      \____         /    \_____      
-              /            \_______/            \______
-        ==================================================
-                    "Hold tight, it's a free-energy ride!"
-
-```
-This provides important data related to PPARg LBD folding landscape → intermediate → unfolded free-energy basins.
 
 ---
 
 # Final Notes
 
-This repository contains a complete and reproducible workflow for **SMOG2-based REMD simulations** in **GROMACS**, including preparation, execution, demultiplexing, Q-analysis, and WHAM free-energy reconstruction.
+This repository contains a complete and reproducible workflow for **SMOG2-based REMD simulations** in **GROMACS**, including preparation, execution, and analysis.
+
 
 For questions or collaboration requests, contact:  
 📧 **mithun121@gmail.com**
+
+
+                HAPPY SIMULATING LAUNCHPAD
+    ==================================================
+       Setup            Run (REMD)            Science
+    (SMOG2+TPRs)     (SLURM + multidir)     (Plots/Paper)
+       _____             _________            ________
+      /     \           /         \          /        \
+     /  PDB  \____     /  replica  \____    /  figure  \
+    /__________   \___/  exchange   \   \__/___________/
+               \      \_____________/      /
+                \_________________________/
+    ==================================================
+         "May your jobs finish, and your replicas mix!"
 
