@@ -1,6 +1,6 @@
 # 🌟 SMOG2 Simulations of PPARg LBD
 
-**Workflow adapted from:** [Mithun-Nag/Gromacs_SMOG_with_replica_exchange](https://github.com/Mithun-Nag/Gromacs_SMOG_with_replica_exchange)
+**Workflow source:** [Mithun-Nag/Gromacs_SMOG_with_replica_exchange](https://github.com/Mithun-Nag/Gromacs_SMOG_with_replica_exchange)
 
 Structure-based (Gō-like) models provide a simplified yet powerful framework for studying biomolecular folding and conformational dynamics. Instead of assigning interactions strictly from chemical composition, these models stabilize a known experimental structure by defining native contacts as energetic minima, consistent with the principle of minimal frustration. This strategy enables efficient and interpretable simulations of protein folding, ligand binding, and large-scale rearrangements in proteins.
 
